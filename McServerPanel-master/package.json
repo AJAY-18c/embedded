@@ -1,0 +1,33 @@
+{
+  "name": "mcserverconsole",
+  "version": "1.0.0",
+  "description": "A simple, lightweight and open source web console for monitoring and controlling minecraft servers",
+  "main": "server.js",
+  "scripts": {
+    "build": "cd app && npm run build && cd .. && node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:build": "cd app && npm run build",
+    "deploy:start": "node server.js",
+    "deploy": "run-s deploy:*",
+    "dev:server": "nodemon server.js",
+    "dev:client": "cd app && npm run serve",
+    "dev": "run-p dev:*"
+  },
+  "author": "Garrett Burroughs",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "express-session": "^1.17.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "socket.io": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5"
+  }
+}
